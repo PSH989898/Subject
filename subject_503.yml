@@ -32,7 +32,7 @@ spec:
       - name: dockerhub-secret
       containers:
       - name: error503
-        image: pshhhhh98/portal:503error
+        image: pshhhhh98/subject:error503
         resources:
           limits:
             memory: "64Mi"

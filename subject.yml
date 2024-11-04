@@ -32,7 +32,7 @@ spec:
       - name: dockerhub-secret
       containers:
       - name: subject
-        image: pshhhhh98/keduitlab:subject
+        image: pshhhhh98/subject:main
         resources:
           limits:
             memory: "64Mi"
