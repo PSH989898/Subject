@@ -1,5 +1,5 @@
 ---
-# svc-shop -> cluster ip 라서 type은 안정해도 됨
+# subject main -> cluster ip 라서 type은 안정해도 됨
 kind: Service
 apiVersion: v1
 metadata:
@@ -11,9 +11,8 @@ spec:
   - port: 80
     targetPort: 80
 
-
 ---
-# deploy-shop
+# subject main
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -32,7 +31,7 @@ spec:
       - name: dockerhub-secret
       containers:
       - name: subject
-        image: pshhhhh98/subject:main
+        image: pshhhhh98/subject:main #도커허브에 있는 이미지 끌어오기
         resources:
           limits:
             memory: "64Mi"
