@@ -15,13 +15,13 @@ spec:
         path: "/?$"  # 메인 페이지 요청
         backend:
           service:
-            name: svc-main
+            name: subject
             port:
               number: 80
       - pathType: Prefix
         path: "/*"  # 모든 다른 요청은 503 에러 페이지
         backend:
           service:
-            name: svc-503error
+            name: error503
             port:
               number: 80

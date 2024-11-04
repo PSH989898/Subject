@@ -3,10 +3,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name:  503error
+  name:  error503
 spec:
   selector:
-    app: 503error
+    app: error503
   ports:
   - port: 80
     targetPort: 80
@@ -17,21 +17,21 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 503error
+  name: error503
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: 503error
+      app: error503
   template:
     metadata:
       labels:
-        app: 503error
+        app: error503
     spec:
       imagePullSecrets:
       - name: dockerhub-secret
       containers:
-      - name: 503error
+      - name: error503
         image: pshhhhh98/portal:503error
         resources:
           limits:
